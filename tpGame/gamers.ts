@@ -55,34 +55,33 @@ class Character {
 
 	class Wizard extends Character {
         magicPoints: number;
-        constructor(magicPoints: number, damage: number, healthPotions: number, atackMethod: any) { super();{
-        /* super.magicPoints =1000; */
-        this.health = 200;
-        this.damage = 100;
-        this.healthPotions = 5;
+        constructor(magicPoints: number, damage: number, healthPotions: number, health: number) { super();{
         this.magicPoints = 300;
-    }
-        /* add(magicPoints, 100) {
-            return new Point(this.damage + healthPotions , this.y + point.y);
-        } */
+        this.damage = 100;   
+        this.healthPotions = 5; 
+        this.health = 200;      
+        }
                  
     }
     
 
 	class Soldier extends Character {
         stamina: number;
-        this.health = 200;
-        this.damage = 1000;
-        this.attackMethod = yes;
+        constructor(damage: number, healthPotions: number, health: number, stamina: number) { super();{
+        this.damage = 500;
+        this.healthPotions = 5; 
+        this.health = 100;
+        this.stamina = 500;
+        }
     }
     
     
 	class Thief extends Character {
         stamina: number;
-        this.health = 200;
-        this.damage = 1000;
-        this.attackMethod = any;
+        constructor(damage: number, healthPotions: number, health: number, stamina: number) { super();{
+        this.damage = 2000;
+        this.healthPotions = 5; 
+        this.health = 300;
+        this.stamina = 100;
+        }
     }
-    
-    
-    
