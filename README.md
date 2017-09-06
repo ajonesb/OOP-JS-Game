@@ -25,3 +25,16 @@ The idea is that the user can choose 2 characters from the three classes and mak
 you can use 5 hp (health potions) and 5 stamina or mp (magic points) potions depending of the character. 
 
 */
+
+* Install NPM - https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm
+
+ - Install typescript 
+
+        > npm install -g typescript
+
+- compile ts file after 
+
+        > tsc gamers.ts
+        
+        
+The result will be a file gamers.js which will have the app code to show in the browser. 
