@@ -44,14 +44,9 @@ class Character {
         this.health = 200;      
         }
 
-            checkHealth() {
-            //this should check if this character is dead based on their health
-            // if health is 0, alert ("character is dead");
-            /* while (checkHealth.Wizard > 200 && checkHealth.Wizard > 100) {
-                console.log("you have been hit");
-            } do {
-                console.log("you are safe.");
-            }  */
+          // This should check if this character is dead based on the characters health.
+          // If health is 0, alert ("character is dead");
+            checkHealth() {           
             if (health > 200) {
                 alert("you are loosing and not too healthy.");
             } 
