@@ -34,25 +34,7 @@ class Character {
 
     } // end of Character class
 
-     checkHealth() {
-        //this should check if this character is dead based on their health
-        // if health is 0, alert ("character is dead");
-        /* while (checkHealth.Wizard > 200 && checkHealth.Wizard > 100) {
-			console.log("you have been hit");
-		} do {
-			console.log("you are safe.");
-        }  */
-         if (checkHealth.Wizard > 200 && checkHealth.Soldier > 100) {
-            alert("you have been hit");
-        } 
-        
-        else {
-            alert("you are safe");           
-		} 
-    }
-
-
-
+     
 	class Wizard extends Character {
         magicPoints: number;
         constructor(magicPoints: number, damage: number, healthPotions: number, health: number) { super();{
@@ -61,9 +43,27 @@ class Character {
         this.healthPotions = 5; 
         this.health = 200;      
         }
+
+            checkHealth() {
+            //this should check if this character is dead based on their health
+            // if health is 0, alert ("character is dead");
+            /* while (checkHealth.Wizard > 200 && checkHealth.Wizard > 100) {
+                console.log("you have been hit");
+            } do {
+                console.log("you are safe.");
+            }  */
+            if (health > 200) {
+                alert("you are loosing and not too healthy.");
+            } 
+            
+            else {
+                alert("you are healthy.");           
+            } 
+        }   
                  
     }
-    
+
+       
 
 	class Soldier extends Character {
         stamina: number;
