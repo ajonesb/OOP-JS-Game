@@ -1,6 +1,6 @@
 /*The exercise is the following:
 
-We are going to do a game, we have three classes : wizard, soldier and thief.
+Create a game with three classes : wizard, soldier and thief.
 
 Wizard uses mp (magic points) to do damage and has Low health. 
 
