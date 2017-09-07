@@ -5,46 +5,71 @@ class Character {
 	health: number;
 	damage: number;
 	healthPotions: number;
-    atackMethod: any;
+    attackMethod: string;
 
-    // add damage here to Character class for players to inherit from 
+    constructor(theAttackMethod:string) {
+    this.attackMethod = theAttackMethod;
+    }
+
+    attack(attackValue:number = 0) {
+        console.log('used ${attack.Value} $ {this.attackMethod} points');
+    }
            
 } // end of Character class
 
 class Wizard extends Character {
 	magicPoints: number;
-	constructor(magicPoints: number, damage: number, healthPotions: number, health: number) {
+	/* constructor(magicPoints: number, damage: number, healthPotions: number, health: number) {
 		super(); {
 			this.magicPoints = 300;
 			this.damage = 100;
 			this.healthPotions = 5;
 			this.health = 200;
         }       		
+    } */
+    constructor(attackMethod:string){super(attackMethod);}
+
+    attack(attackValue:number = 5) {
+        console.log('Wizard Attacking!');
+        super.attack(attackValue);
     }
+        
 }
                
 class Soldier extends Character {
     stamina: number;
-    constructor(damage: number, healthPotions: number, health: number, stamina: number) {
+    /* constructor(damage: number, healthPotions: number, health: number, stamina: number) {
         super(); {
             this.damage = 500;
             this.healthPotions = 5;
             this.health = 100;
             this.stamina = 500;
         }
+    } */
+    constructor(attackMethod:string){super(attackMethod);}
+
+    attack(attackValue:number = 5) {
+        console.log('Soldier Attacking!');
+        super.attack(attackValue);
     }
 
 }
 
 class Thief extends Character {
     stamina: number;
-    constructor(damage: number, healthPotions: number, health: number, stamina: number) {
+    /* constructor(damage: number, healthPotions: number, health: number, stamina: number) {
         super(); {
             this.damage = 2000;
             this.healthPotions = 5;
             this.health = 300;
             this.stamina = 100;
         }
+    } */
+    constructor(attackMethod:string){super(attackMethod);}
+
+    attack(attackValue:number = 5) {
+        console.log('Wizard Attacking!');
+        super.attack(attackValue);
     }
 }
 
