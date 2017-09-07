@@ -14,6 +14,15 @@ class Character {
     attack(attackValue:number = 0) {
         console.log('used ${attack.Value} $ {this.attackMethod} points');
     }
+
+    yourHealth() {
+        if (this.health > 200) {
+				console.log("you are loosing and not too healthy.");
+			} else {
+				alert("you are healthy.");
+			}
+    }
+
            
 } // end of Character class
 
