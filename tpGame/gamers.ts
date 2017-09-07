@@ -3,30 +3,30 @@ class Character {
 	health: number;
 	damage: number;
 	healthPotions: number;
-	atackMethod: any;
-	healMySelf() {
-		this.healthPotions -= 1;
-		this.health += 100;
+    atackMethod: any;
+    
+	function healMySelf() {
+		healthPotions:number -= 1;
+        health:number += 100;
+        
 		//adds points to character
 		// constantly checks against the character total health.. while health is not 0 () {}
-	}
-	while (Wizard.health > 0 && Soldier.health > 0) {
-		alert("you are healthy");
-	}
-	attack() {
-		this.damage = -1;
-		//minus attack ability
-		//substracts fom attack method. Think of this as bullets in a gun. You have a total amount and everytime u use them, u loose bullets to use 
-		// in your attack. If you are out of bullets, you can't attack. 
-		doDamage() {
-			/* this.health = -1; */
-			/* (attackMessage) => {
-			    console.log("you hit a player, nice job.");
-			} */
-		}
-	}
-} // end of Character class
+	
+        while (health  < 0 && health > 0) {
+            alert("you are healthy");
+        }
+	
+    } // end of Character class
 
+
+    function attack() {
+            //minus attack ability
+            //substracts fom attack method. Think of this as bullets in a gun. You have a total amount and everytime u use them, u loose bullets to use 
+            // in your attack. If you are out of bullets, you can't attack. 
+            
+    }
+
+    
 
 class Wizard extends Character {
 	magicPoints: number;
@@ -38,16 +38,30 @@ class Wizard extends Character {
 			this.health = 200;
 		}
 		// This should check if this character is dead based on the characters health.
-		// If health is 0, alert ("character is dead");
-		checkHealth() {
+        // If health is 0, alert ("character is dead");
+        
+		function checkHealth() {
 			if (health > 200) {
 				alert("you are loosing and not too healthy.");
 			} else {
 				alert("you are healthy.");
 			}
-		}
+        }
+        
+        checkHealth();
+
+        function gameOver() {   
+            if (health === 0) {
+                alert("Game Over!");
+            
+                } else {
+                    alert("Continue playing!");
+                }
+        }
     }
 }
+               
+            
     
 class Soldier extends Character {
     stamina: number;
