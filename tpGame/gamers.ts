@@ -6,29 +6,8 @@ class Character {
 	damage: number;
 	healthPotions: number;
     atackMethod: any;
-    
-	function healMySelf() {
-		healthPotions:number -= 1;
-        health:number += 100;
-        
-		//adds points to character
-		// constantly checks against the character total health.. while health is not 0 () {}
-	
-        while (health  < 0 && health > 0) {
-            alert("you are healthy");
-        }
-	
-    } // end of Character class
-
-
-    function attack() {
-            //minus attack ability
-            //substracts fom attack method. Think of this as bullets in a gun. You have a total amount and everytime u use them, u loose bullets to use 
-            // in your attack. If you are out of bullets, you can't attack. 
-            
-    }
-
-    
+           
+} // end of Character class
 
 class Wizard extends Character {
 	magicPoints: number;
@@ -38,35 +17,10 @@ class Wizard extends Character {
 			this.damage = 100;
 			this.healthPotions = 5;
 			this.health = 200;
-		}
-		// This should check if this character is dead based on the characters health.
-        // If health is 0, alert ("character is dead");
-        
-		function checkHealth() {
-			if (health > 200) {
-				alert("you are loosing and not too healthy.");
-			} else {
-				alert("you are healthy.");
-			}
-        }
-        
-        checkHealth();
-
-        function gameOver() {   
-            if (health === 0) {
-                alert("Game Over!");
-            
-                } else {
-                    alert("Continue playing!");
-                }
-        }
-
-        gameOver();
+        }       		
     }
 }
                
-            
-    
 class Soldier extends Character {
     stamina: number;
     constructor(damage: number, healthPotions: number, health: number, stamina: number) {
@@ -92,6 +46,59 @@ class Thief extends Character {
     }
 }
 
+// Functionality below 
+
+
+function healthCheck(health, damage) {
+    var returnValue = "Your health is : "; // initialize variable
+    // This inner function has access to the outer function's variables & parameters
+    function calculateHealth() { // CLOSURE FUNCTION
+        return returnValue + (health + damage);//access to outer function
+    }
+    return calculateHealth(); // outer function is going to call inner function which is add
+    //without parenthesis, will get inner function expression. 
+}
+
+var healthResult = healthCheck(1000,200);
+document.write(healthResult);
+/* alert("Continue playing!"); */
+
+
+
+function attack() {
+        //minus attack ability
+        //substracts fom attack method. Think of this as bullets in a gun. You have a total amount and everytime u use them, u loose bullets to use 
+        // in your attack. If you are out of bullets, you can't attack.             
+}
+
+
+// This should check if this character is dead based on the characters health.
+        // If health is 0, alert ("character is dead");
+        
+		/* function checkHealth() {
+			if (health > 200) {
+				alert("you are loosing and not too healthy.");
+			} else {
+				alert("you are healthy.");
+			}
+        }
+        
+        checkHealth();
+
+        function gameOver() {   
+            if (health === 0) {
+                alert("Game Over!");
+            
+                } else {
+                    alert("Continue playing!");
+                }
+        }
+
+        gameOver(); */
+
+
+
+// Add buttons to view 
 
 var wizardButton = document.createElement("button");
 wizardButton.innerHTML = "Select Wizard";
