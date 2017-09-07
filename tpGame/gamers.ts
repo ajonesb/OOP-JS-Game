@@ -58,6 +58,8 @@ class Wizard extends Character {
                     alert("Continue playing!");
                 }
         }
+
+        gameOver();
     }
 }
                
