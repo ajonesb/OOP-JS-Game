@@ -6,6 +6,8 @@ class Character {
 	damage: number;
 	healthPotions: number;
     atackMethod: any;
+
+    // add damage here to Character class for players to inherit from 
            
 } // end of Character class
 
@@ -70,6 +72,9 @@ function attack() {
         //substracts fom attack method. Think of this as bullets in a gun. You have a total amount and everytime u use them, u loose bullets to use 
         // in your attack. If you are out of bullets, you can't attack.             
 }
+
+
+
 
 
 // This should check if this character is dead based on the characters health.
