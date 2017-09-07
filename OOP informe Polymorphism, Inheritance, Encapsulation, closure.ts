@@ -1,9 +1,7 @@
 // ENCAPSULATION
 
-
 // Here was have some random file called app.js 
 var name = "Brent"; // Brent name is at global scope
-
 
 // Some other file called other.js 
 (function() { //parenthesis here are closing of this scope for this file to show the name Farris, encapsulation Farris as name.   
@@ -94,15 +92,7 @@ tom.move(34);
 
 // POLIMORPHISM
 
-/*In the example above (not typescript, the written example), we had a Programmer object that inherited all of the methods 
-of the parent Person object. 
-
-This means that both objects provide a "talk" method, among others. Now imagine that somewhere in our code, there's 
-a variable called Bob and it so happens that we don't know if Bob is a Person, 
-or a Programmer object. 
-
-We can still call the "talk" method on the Bob object and the code will work. This ability to 
-call the same method on different objects and have each of them respond in their own way is called polymorphism.
+/*
 
 Poly= many, Morphism=form - Link : https://blog.knoldus.com/2017/02/17/object-oriented-javascript-polymorphism-with-examples/
 
