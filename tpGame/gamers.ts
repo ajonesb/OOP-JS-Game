@@ -1,3 +1,5 @@
+
+
 //create the class with the different properties of health, damage, doDamage, cureMySelf
 class Character {
 	health: number;
@@ -89,3 +91,36 @@ class Thief extends Character {
         }
     }
 }
+
+
+var wizardButton = document.createElement("button");
+wizardButton.innerHTML = "Select Wizard";
+
+var thiefButton = document.createElement("button");
+thiefButton.innerHTML = "Select Thief";
+
+var soldierButton = document.createElement("button");
+soldierButton.innerHTML = "Select Soldier";
+
+// Append somewhere on the body
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(wizardButton);
+
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(thiefButton);
+
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(soldierButton);
+
+// Add event handlers for click events on fighters
+wizardButton.addEventListener ("click", function() {
+  alert("you selected Wizard, please select second player to start game.");
+});
+
+thiefButton.addEventListener ("click", function() {
+  alert("you selected Thief, please select second player to start game.");
+});
+
+soldierButton.addEventListener ("click", function() {
+  alert("you selected soldier, please select second player to start game.");
+});
