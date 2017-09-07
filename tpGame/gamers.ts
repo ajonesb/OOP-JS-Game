@@ -19,7 +19,7 @@ class Character {
         if (this.health > 200) {
 				console.log("you are loosing and not too healthy.");
 			} else {
-				alert("you are healthy.");
+				console.log("you are healthy.");
 			}
     }
 
