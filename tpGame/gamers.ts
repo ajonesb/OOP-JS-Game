@@ -23,6 +23,14 @@ class Character {
 			}
     }
 
+    healthPotion() {
+        if (this.damage > 500) {
+				console.log("you need a health potion.");
+			} else {
+				console.log("you are in good shape, you don't need a potion.");
+			}
+    }
+
            
 } // end of Character class
 
