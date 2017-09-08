@@ -41,7 +41,7 @@ you can use 5 hp (health potions) and 5 stamina or mp (magic points) potions dep
 The result will be a file gamers.js which will have the app code to show in the browser. 
 
 
-Development Progress Notes:
+****************************Development Progress Notes:*************************************************
 
 08/09/2017
 
@@ -53,11 +53,24 @@ between the Character Class and Wizard Class. Go code by code, piece by piece.
 - Who is wizard attacking after creating methods to attack on Wizard class. You have to create a condition when
 Wizard is clicked that console.logs "please select another player in order to start game" 
 
-
-wizard created<br>
-gamers.js:40 Wizard Attacking!<br>
-gamers.js:18 used 5 magic points to attack<br>
-gamers.js:40 Wizard Attacking!<br>
-gamers.js:18 used 77 magic points to attack<br>
+CONSOLE:
+wizard created <br>
+Wizard Attacking! <br>
+used 5 magic points to attack <br>
+Wizard Attacking! <br>
+used 77 magic points to attack <br>
 
 - Better to start when Wizard is clicked, console.log showing "you selected wizard, please select another player."
+
+- Once player 2 is selected, either player one or player two will start attacking then with what is showing on
+on the console above start attacking Wizard (or which ever player was selected first). 
+
+- Then Create counter attack of second player selected showing console log of the same output info as above.
+
+CONSOLE:
+Soldier created <br>
+Soldier Attacking! <br>
+used 5 magic points to attack <br>
+Soldier Attacking! <br>
+used 77 magic points to attack <br>
+
