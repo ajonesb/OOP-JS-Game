@@ -41,7 +41,7 @@ you can use 5 hp (health potions) and 5 stamina or mp (magic points) potions dep
 The result will be a file gamers.js which will have the app code to show in the browser. 
 
 
-****************************Development Progress Notes:*************************************************
+DEVELOPMENT PROGRESS NOTES:
 
 08/09/2017
 
