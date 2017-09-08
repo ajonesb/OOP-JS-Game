@@ -38,3 +38,25 @@ you can use 5 hp (health potions) and 5 stamina or mp (magic points) potions dep
         
         
 The result will be a file gamers.js which will have the app code to show in the browser. 
+
+
+Development Progress Notes:
+
+08/09/2017
+
+- Follow the order of the Character and Wizard class function and see how it works (try to understand it) 
+then try to do the same for soldier and thief.. but really understand the inheritance that is happening 
+between the Character Class and Wizard Class. Go code by code, piece by piece.
+
+
+- Who is wizard attacking after creating methods to attack on Wizard class. You have to create a condition when
+Wizard is clicked that console.logs "please select another player in order to start game" 
+
+
+wizard created
+gamers.js:40 Wizard Attacking!
+gamers.js:18 used 5 magic points to attack
+gamers.js:40 Wizard Attacking!
+gamers.js:18 used 77 magic points to attack
+
+- Better to start when Wizard is clicked, console.log showing "you selected wizard, please select another player."
