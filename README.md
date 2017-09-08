@@ -1,4 +1,4 @@
-/*The exercise is the following:
+The exercise is the following:
 
 Create a game with three classes : wizard, soldier and thief.
 
@@ -24,7 +24,6 @@ Thief has Low health, crazy damage and uses stamina to attack.
 The idea is that the user can choose 2 characters from the three classes and make them fight each other, 
 you can use 5 hp (health potions) and 5 stamina or mp (magic points) potions depending of the character. 
 
-*/
 
 * Install NPM - https://www.npmjs.com/get-npm?utm_source=house&utm_medium=homepage&utm_campaign=free%20orgs&utm_term=Install%20npm
 
