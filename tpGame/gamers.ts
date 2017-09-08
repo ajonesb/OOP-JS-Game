@@ -45,7 +45,7 @@ class Wizard extends Character {
     } */
     constructor(attackMethod:string) {
         super(attackMethod);
-        console.log("wizard created");
+        console.log("wizard selected");
     }
 
     attack(attackValue:number = 77) {
@@ -161,15 +161,15 @@ window.onload = function(){
     let myWizard;
     let wizardButton = document.createElement("button");
     document.body.appendChild(wizardButton);
-    wizardButton.innerHTML = "Selectasdasd Wizard";
+    wizardButton.innerHTML = "Wizard";
     
     let thiefButton = document.createElement("button");
     document.body.appendChild(thiefButton);
-    thiefButton.innerHTML = "Selectasdas Thief";
+    thiefButton.innerHTML = "Thief";
     
     let soldierButton = document.createElement("button");
     document.body.appendChild(soldierButton);
-    soldierButton.innerHTML = "Selectasdasd Soldier";
+    soldierButton.innerHTML = "Soldier";
     console.log(wizardButton);
 
     // Add event handlers for click events on fighters
@@ -180,11 +180,11 @@ wizardButton.addEventListener ("click", function() {
   });
   
   thiefButton.addEventListener ("click", function() {
-    alert("you selected Thief, please select second player to start game.");
+    console.log("you selected Thief, please select second player to start game.");
   });
   
   soldierButton.addEventListener ("click", function() {
-    alert("you selected soldier, please select second player to start game.");
+    console.log("you selected soldier, please select second player to start game.");
   });
   
 }
