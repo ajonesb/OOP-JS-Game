@@ -1,10 +1,9 @@
 
-
 //create the class with the different properties of health, damage, doDamage, cureMySelf
 class Character {
-	health: number;
+	/* health: number;
 	damage: number;
-	healthPotions: number;
+	healthPotions: number; */
     attackMethod: string;
 
     constructor(theAttackMethod:string) {
@@ -12,30 +11,30 @@ class Character {
     }
 
     attack(attackValue:number = 0) {
-        console.log('used ${attack.Value} $ {this.attackMethod} points');
+        console.log(`used ${attackValue} ${this.attackMethod} to attack`);
     }
 
-    yourHealth() {
+   /*  yourHealth() {
         if (this.health > 200) {
 				console.log("you are loosing and not too healthy.");
 			} else {
 				console.log("you are healthy.");
 			}
-    }
+    } */
 
-    healthPotion() {
+    /* healthPotion() {
         if (this.damage > 500) {
 				console.log("you need a health potion.");
 			} else {
 				console.log("you are in good shape, you don't need a potion.");
 			}
-    }
+    } */
 
            
 } // end of Character class
 
 class Wizard extends Character {
-	magicPoints: number;
+	/* magicPoints: number; */
 	/* constructor(magicPoints: number, damage: number, healthPotions: number, health: number) {
 		super(); {
 			this.magicPoints = 300;
@@ -44,9 +43,12 @@ class Wizard extends Character {
 			this.health = 200;
         }       		
     } */
-    constructor(attackMethod:string){super(attackMethod);}
+    constructor(attackMethod:string) {
+        super(attackMethod);
+        console.log("wizard created");
+    }
 
-    attack(attackValue:number = 5) {
+    attack(attackValue:number = 77) {
         console.log('Wizard Attacking!');
         super.attack(attackValue);
     }
@@ -54,7 +56,7 @@ class Wizard extends Character {
 }
                
 class Soldier extends Character {
-    stamina: number;
+    /* stamina: number; */
     /* constructor(damage: number, healthPotions: number, health: number, stamina: number) {
         super(); {
             this.damage = 500;
@@ -63,7 +65,9 @@ class Soldier extends Character {
             this.stamina = 500;
         }
     } */
-    constructor(attackMethod:string){super(attackMethod);}
+    constructor(attackMethod:string) {
+        super(attackMethod);
+    }
 
     attack(attackValue:number = 5) {
         console.log('Soldier Attacking!');
@@ -73,7 +77,7 @@ class Soldier extends Character {
 }
 
 class Thief extends Character {
-    stamina: number;
+    /* stamina: number; */
     /* constructor(damage: number, healthPotions: number, health: number, stamina: number) {
         super(); {
             this.damage = 2000;
@@ -82,7 +86,9 @@ class Thief extends Character {
             this.stamina = 100;
         }
     } */
-    constructor(attackMethod:string){super(attackMethod);}
+    constructor(attackMethod:string) {
+        super(attackMethod);
+    }
 
     attack(attackValue:number = 5) {
         console.log('Wizard Attacking!');
@@ -93,27 +99,26 @@ class Thief extends Character {
 // Functionality below 
 
 
-function healthCheck(health, damage) {
-    var returnValue = "Your health is : "; // initialize variable
-    // This inner function has access to the outer function's variables & parameters
-    function calculateHealth() { // CLOSURE FUNCTION
-        return returnValue + (health + damage);//access to outer function
+/* function healthCheck(health, damage) {
+    var returnValue = "Your health is : "; 
+    
+    function calculateHealth() { 
+        return returnValue + (health + damage);
     }
-    return calculateHealth(); // outer function is going to call inner function which is add
-    //without parenthesis, will get inner function expression. 
+    return calculateHealth(); 
 }
 
 var healthResult = healthCheck(1000,200);
-document.write(healthResult);
-/* alert("Continue playing!"); */
+document.write(healthResult); */
 
 
 
-function attack() {
+
+/* function attack() { */
         //minus attack ability
         //substracts fom attack method. Think of this as bullets in a gun. You have a total amount and everytime u use them, u loose bullets to use 
         // in your attack. If you are out of bullets, you can't attack.             
-}
+/* } */
 
 
 
@@ -147,34 +152,41 @@ function attack() {
 
 // Add buttons to view 
 
-var wizardButton = document.createElement("button");
-wizardButton.innerHTML = "Select Wizard";
 
-var thiefButton = document.createElement("button");
-thiefButton.innerHTML = "Select Thief";
-
-var soldierButton = document.createElement("button");
-soldierButton.innerHTML = "Select Soldier";
 
 // Append somewhere on the body
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(wizardButton);
+/* body.appendChild(thiefButton);
+body.appendChild(soldierButton); */
+window.onload = function(){
+    let myWizard;
+    let wizardButton = document.createElement("button");
+    document.body.appendChild(wizardButton);
+    wizardButton.innerHTML = "Selectasdasd Wizard";
+    
+    let thiefButton = document.createElement("button");
+    document.body.appendChild(thiefButton);
+    thiefButton.innerHTML = "Selectasdas Thief";
+    
+    let soldierButton = document.createElement("button");
+    document.body.appendChild(soldierButton);
+    soldierButton.innerHTML = "Selectasdasd Soldier";
+    console.log(wizardButton);
 
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(thiefButton);
-
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(soldierButton);
-
-// Add event handlers for click events on fighters
+    // Add event handlers for click events on fighters
 wizardButton.addEventListener ("click", function() {
-  alert("you selected Wizard, please select second player to start game.");
-});
+    myWizard = new Wizard("magic points"); 
+    myWizard.attack(5);
+    myWizard.attack();
+  });
+  
+  thiefButton.addEventListener ("click", function() {
+    alert("you selected Thief, please select second player to start game.");
+  });
+  
+  soldierButton.addEventListener ("click", function() {
+    alert("you selected soldier, please select second player to start game.");
+  });
+  
+}
 
-thiefButton.addEventListener ("click", function() {
-  alert("you selected Thief, please select second player to start game.");
-});
 
-soldierButton.addEventListener ("click", function() {
-  alert("you selected soldier, please select second player to start game.");
-});
