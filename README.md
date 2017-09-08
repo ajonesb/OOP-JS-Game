@@ -35,7 +35,8 @@ you can use 5 hp (health potions) and 5 stamina or mp (magic points) potions dep
 - compile ts file after 
 
         > tsc gamers.ts
-        
+
+* or use typescript watcher to auto compile - https://www.npmjs.com/package/typescript-watcher
         
 The result will be a file gamers.js which will have the app code to show in the browser. 
 
