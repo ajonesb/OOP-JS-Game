@@ -53,10 +53,10 @@ between the Character Class and Wizard Class. Go code by code, piece by piece.
 Wizard is clicked that console.logs "please select another player in order to start game" 
 
 
-wizard created
-gamers.js:40 Wizard Attacking!
-gamers.js:18 used 5 magic points to attack
-gamers.js:40 Wizard Attacking!
-gamers.js:18 used 77 magic points to attack
+wizard created<br>
+gamers.js:40 Wizard Attacking!<br>
+gamers.js:18 used 5 magic points to attack<br>
+gamers.js:40 Wizard Attacking!<br>
+gamers.js:18 used 77 magic points to attack<br>
 
 - Better to start when Wizard is clicked, console.log showing "you selected wizard, please select another player."
