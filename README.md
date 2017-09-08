@@ -53,7 +53,7 @@ between the Character Class and Wizard Class. Go code by code, piece by piece.
 - Who is wizard attacking after creating methods to attack on Wizard class. You have to create a condition when
 Wizard is clicked that console.logs "please select another player in order to start game" 
 
-CONSOLE:
+CONSOLE: <br>
 wizard created <br>
 Wizard Attacking! <br>
 used 5 magic points to attack <br>
@@ -67,7 +67,7 @@ on the console above start attacking Wizard (or which ever player was selected f
 
 - Then Create counter attack of second player selected showing console log of the same output info as above.
 
-CONSOLE:
+CONSOLE: <br>
 Soldier created <br>
 Soldier Attacking! <br>
 used 5 magic points to attack <br>
