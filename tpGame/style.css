@@ -1,20 +1,42 @@
 body {
   padding: 20px;
+  background: black;
+  background: url(http://awesomwallpaper.com/img2/5217B1BFA333F599/black-space-stars.jpg);
+  background-attachment: fixed;
+  background-position: cover;
 }
 button {
   margin-top: 20px;
-  line-height: 60px;
+  line-height: 44px;
   font-weight: bold;
-  padding: 0 40px;
-  background: black;
+  padding: 0 28px;
+  background: white;
   border: none;
-  color: white;
-  margin: 20px;
-  box-shadow: 4px 4px 8px #888888;
+  color: black;
+  margin: 5px;
   text-transform: uppercase;
   
 }
 button:hover {
-  background: grey;
-  box-shadow: 2px 2px 4px #888888;
+  opacity: .9;
+}
+
+#mylog {
+
+  width: 50%;
+  border: 1px solid white;
+  height: auto;
+}
+
+ div {
+   padding: 5px;
+
+}
+
+p   {
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
