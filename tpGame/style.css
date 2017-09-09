@@ -4,6 +4,8 @@ body {
   background: url(http://awesomwallpaper.com/img2/5217B1BFA333F599/black-space-stars.jpg);
   background-attachment: fixed;
   background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 button {
   margin-top: 20px;
@@ -15,6 +17,7 @@ button {
   color: black;
   margin: 5px;
   text-transform: uppercase;
+  cursor: pointer;
   
 }
 button:hover {
