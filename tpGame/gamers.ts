@@ -1,4 +1,5 @@
 
+
 //create the class with the different properties of health, damage, doDamage, cureMySelf
 class Character {
 	/* health: number;
@@ -67,6 +68,7 @@ class Soldier extends Character {
     } */
     constructor(attackMethod:string) {
         super(attackMethod);
+        console.log("soldier selected");
     }
 
     attack(attackValue:number = 5) {
@@ -88,10 +90,11 @@ class Thief extends Character {
     } */
     constructor(attackMethod:string) {
         super(attackMethod);
+        console.log("Thief selected");
     }
 
     attack(attackValue:number = 5) {
-        console.log('Wizard Attacking!');
+        console.log('Thief Attacking!');
         super.attack(attackValue);
     }
 }
@@ -163,29 +166,42 @@ window.onload = function(){
     document.body.appendChild(wizardButton);
     wizardButton.innerHTML = "Wizard";
     
+    let myThief;
     let thiefButton = document.createElement("button");
     document.body.appendChild(thiefButton);
     thiefButton.innerHTML = "Thief";
     
+    let mySoldier;
     let soldierButton = document.createElement("button");
     document.body.appendChild(soldierButton);
     soldierButton.innerHTML = "Soldier";
-    console.log(wizardButton);
 
     // Add event handlers for click events on fighters
-wizardButton.addEventListener ("click", function() {
+    wizardButton.addEventListener ("click", function() {
     myWizard = new Wizard("magic points"); 
     myWizard.attack(5);
-    myWizard.attack();
   });
   
   thiefButton.addEventListener ("click", function() {
-    console.log("you selected Thief, please select second player to start game.");
+    myThief = new Thief("stamina");
+    myThief.attack(20);
+    /* console.log("you selected Thief, please select second player to start game."); */
   });
   
   soldierButton.addEventListener ("click", function() {
-    console.log("you selected soldier, please select second player to start game.");
+    mySoldier = new Soldier("stamina");
+    mySoldier.attack(200);
+    /* console.log("you selected soldier, please select second player to start game."); */
   });
+
+//show console on page instead
+  window.console = {
+    log: function(str:any){
+      var node = document.createElement("div");
+      node.appendChild(document.createTextNode(str));
+      document.getElementById("myLog").appendChild(node);
+    }
+  }
   
 }
 
