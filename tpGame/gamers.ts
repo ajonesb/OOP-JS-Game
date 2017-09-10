@@ -1,10 +1,10 @@
 
 
-//create the class with the different properties of health, damage, doDamage, cureMySelf
+//create the class with the different properties of health, damage, cureMySelf
 class Character {
-	/* health: number;
+	health: number;
 	damage: number;
-	healthPotions: number; */
+	healthPotions: number; 
     attackMethod: string;
 
     constructor(theAttackMethod:string) {
@@ -15,27 +15,28 @@ class Character {
         console.log(`used ${attackValue} ${this.attackMethod} to attack`);
     }
 
-   /*  yourHealth() {
-        if (this.health > 200) {
-				console.log("you are loosing and not too healthy.");
+   yourHealth() {
+        if (this.health > 30) {
+            console.log(`your health is ${this.health}, you need a health potion`);
 			} else {
-				console.log("you are healthy.");
+				console.log(`your health is ${this.health}, continue playing`);
 			}
-    } */
+    } 
 
-    /* healthPotion() {
-        if (this.damage > 500) {
-				console.log("you need a health potion.");
+   curemySelf() {
+        if (this.damage > 30) {
+				console.log("you obtained a health potion!");
 			} else {
-				console.log("you are in good shape, you don't need a potion.");
+				console.log("Good health, keep fighting!");
 			}
-    } */
+    }  
+ 
 
            
 } // end of Character class
 
 class Wizard extends Character {
-	/* magicPoints: number; */
+    magicPoints: number; 
 	/* constructor(magicPoints: number, damage: number, healthPotions: number, health: number) {
 		super(); {
 			this.magicPoints = 300;
@@ -46,13 +47,22 @@ class Wizard extends Character {
     } */
     constructor(attackMethod:string) {
         super(attackMethod);
-        console.log("wizard selected");
+        console.log("Wizard selected");
+
+
+        //if Wizard selected, please select second player to start game
+
     }
 
     attack(attackValue:number = 77) {
         console.log('Wizard Attacking!');
         super.attack(attackValue);
     }
+
+    yourHealth(health:number = 200){
+        super.health(health);
+    }
+
         
 }
                
@@ -68,7 +78,9 @@ class Soldier extends Character {
     } */
     constructor(attackMethod:string) {
         super(attackMethod);
-        console.log("soldier selected");
+        console.log("Soldier selected");
+
+        //if Soldier selected, please select second player to start game
     }
 
     attack(attackValue:number = 5) {
@@ -91,6 +103,8 @@ class Thief extends Character {
     constructor(attackMethod:string) {
         super(attackMethod);
         console.log("Thief selected");
+
+        //if Thief selected, please select second player to start game
     }
 
     attack(attackValue:number = 5) {
@@ -152,14 +166,7 @@ document.write(healthResult); */
         gameOver(); */
 
 
-
-// Add buttons to view 
-
-
-
-// Append somewhere on the body
-/* body.appendChild(thiefButton);
-body.appendChild(soldierButton); */
+//create buttons and append on the body
 window.onload = function(){
     let myWizard;
     let wizardButton = document.createElement("button");
@@ -176,10 +183,13 @@ window.onload = function(){
     document.body.appendChild(soldierButton);
     soldierButton.innerHTML = "Soldier";
 
+
+
     // Add event handlers for click events on fighters
     wizardButton.addEventListener ("click", function() {
     myWizard = new Wizard("magic points"); 
     myWizard.attack(5);
+    myWizard.yourHealth(200);
   });
   
   thiefButton.addEventListener ("click", function() {
