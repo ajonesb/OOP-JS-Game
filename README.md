@@ -73,3 +73,25 @@ used 5 magic points to attack <br>
 Soldier Attacking! <br>
 used 77 magic points to attack <br>
 
+09/09/2017
+
+Added methods to character class :
+
+  yourHealth() {
+        if (this.health > 30) {
+            console.log(`your health is ${this.health}, you need a health potion`);
+			} else {
+				console.log(`your health is ${this.health}, continue playing`);
+			}
+    } 
+
+   curemySelf() {
+        if (this.damage > 30) {
+				console.log("you obtained a health potion!");
+			} else {
+				console.log("Good health, keep fighting!");
+			}
+    }  
+
+
+and calling as a super class on Wizard sub class but showing error. 
