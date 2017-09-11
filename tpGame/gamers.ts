@@ -15,7 +15,7 @@ class Character {
             } else { 
                 console.log ("Start game");
             }     
-    }; */
+    }; */ 
 
     attack(attackValue:number = 0) {
         console.log(`used ${attackValue} ${this.attackMethod} to attack`);
@@ -37,8 +37,6 @@ class Character {
 			}
     } 
 
-
-    //disable buttons if health is 0
      gameOver () {
         if (this.health === 0) {
             console.log ("Game Over");
@@ -52,6 +50,13 @@ class Character {
 
 class Wizard extends Character {
     magicPoints: number; 
+    health = 200;
+    healthPotions = 5;
+    damage = 100;
+  /*   this.magicPoints = 300;
+	this.damage = 100;
+	this.healthPotions = 5;
+	this.health = 200; */
 	/* constructor(magicPoints: number, damage: number, healthPotions: number, health: number) {
 		super(); {
 			this.magicPoints = 300;
@@ -78,7 +83,9 @@ class Wizard extends Character {
 }
                
 class Soldier extends Character {
-    /* stamina: number; */
+        stamina: number; 
+        health: 100;
+        damage: 500;
     /* constructor(damage: number, healthPotions: number, health: number, stamina: number) {
         super(); {
             this.damage = 500;
@@ -102,7 +109,9 @@ class Soldier extends Character {
 }
 
 class Thief extends Character {
-    /* stamina: number; */
+    stamina: number;
+    health = 300;
+    damage = 2000;
     /* constructor(damage: number, healthPotions: number, health: number, stamina: number) {
         super(); {
             this.damage = 2000;
@@ -182,13 +191,17 @@ window.onload = function(){
   thiefButton.addEventListener ("click", function() {
     myThief = new Thief("stamina");
     myThief.attack(20);
+    myWizard.yourHealth(79);
+    myWizard.gameOver(); 
     /* console.log("you selected Thief, please select second player to start game."); */
   });
   
   soldierButton.addEventListener ("click", function() {
     mySoldier = new Soldier("stamina");
     mySoldier.attack(200);
+    myWizard.yourHealth(79);
     myWizard.curemySelf();
+    myWizard.gameOver();
     /* console.log("you selected soldier, please select second player to start game."); */
   });
 
