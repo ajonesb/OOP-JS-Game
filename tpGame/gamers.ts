@@ -163,19 +163,19 @@ window.onload = function(){
     let wizardButton = document.createElement("button");
     wizardButton.id ='wizardboton'; 
     document.body.appendChild(wizardButton);
-    wizardButton.innerHTML = "Wizard";
+    wizardButton.innerHTML = "Wizard Fight";
    
     let myThief;
     let thiefButton = document.createElement("button");
     thiefButton.id ='thiefboton'; 
     document.body.appendChild(thiefButton);
-    thiefButton.innerHTML = "Thief";
+    thiefButton.innerHTML = "Thief Fight";
     
     let mySoldier;
     let soldierButton = document.createElement("button");
     soldierButton.id ='soldierboton';
     document.body.appendChild(soldierButton);
-    soldierButton.innerHTML = "Soldier";
+    soldierButton.innerHTML = "Soldier Fight";
 
 
 
