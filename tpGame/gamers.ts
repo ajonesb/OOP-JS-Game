@@ -9,6 +9,14 @@ class Character {
     this.attackMethod = theAttackMethod;
     }
 
+    /* characterClick () {
+            if (wizardboton.clicked == true) {
+                console.log ("Please select second player to start game");
+            } else { 
+                console.log ("Start game");
+            }     
+    }; */
+
     attack(attackValue:number = 0) {
         console.log(`used ${attackValue} ${this.attackMethod} to attack`);
     }
@@ -19,18 +27,27 @@ class Character {
 			} else {
 				console.log(`your health is ${this.health}, continue playing`);
 			}
-    } 
+    };
 
-   /* curemySelf() {
+   curemySelf() {
         if (this.damage > 30) {
 				console.log("you obtained a health potion!");
 			} else {
 				console.log("Good health, keep fighting!");
 			}
-    } */  
- 
+    } 
 
-           
+
+    //disable buttons if health is 0
+     gameOver () {
+        if (this.health === 0) {
+            console.log ("Game Over");
+        /*  wizardboton.disabled = true; 
+            thief.Button.disabled = true;
+            soldier.Button.disabled = true; */
+        }      
+    };
+          
 } // end of Character class
 
 class Wizard extends Character {
@@ -45,11 +62,7 @@ class Wizard extends Character {
     } */
     constructor(attackMethod:string) {
         super(attackMethod);
-        console.log("Wizard selected");
-
-
-        //if Wizard selected, please select second player to start game
-
+        console.log("Wizard selected");                 
     }
 
     attack(attackValue:number = 77) {
@@ -57,9 +70,9 @@ class Wizard extends Character {
         super.attack(attackValue);
     }
 
-     yourHealth(health:number = 200){
+    /*  yourHealth(health:number = 200){
         super.health(health);
-    }  
+    }   */
 
         
 }
@@ -127,8 +140,6 @@ var healthResult = healthCheck(1000,200);
 document.write(healthResult); */
 
 
-
-
 /* function attack() { */
         //minus attack ability
         //substracts fom attack method. Think of this as bullets in a gun. You have a total amount and everytime u use them, u loose bullets to use 
@@ -137,47 +148,23 @@ document.write(healthResult); */
 
 
 
-
-
-// This should check if this character is dead based on the characters health.
-        // If health is 0, alert ("character is dead");
-        
-		/* function checkHealth() {
-			if (health > 200) {
-				alert("you are loosing and not too healthy.");
-			} else {
-				alert("you are healthy.");
-			}
-        }
-        
-        checkHealth();
-
-        function gameOver() {   
-            if (health === 0) {
-                alert("Game Over!");
-            
-                } else {
-                    alert("Continue playing!");
-                }
-        }
-
-        gameOver(); */
-
-
 //create buttons and append on the body
 window.onload = function(){
     let myWizard;
     let wizardButton = document.createElement("button");
+    wizardButton.id ='wizardboton'; 
     document.body.appendChild(wizardButton);
     wizardButton.innerHTML = "Wizard";
-    
+   
     let myThief;
     let thiefButton = document.createElement("button");
+    thiefButton.id ='thiefboton'; 
     document.body.appendChild(thiefButton);
     thiefButton.innerHTML = "Thief";
     
     let mySoldier;
     let soldierButton = document.createElement("button");
+    soldierButton.id ='soldierboton';
     document.body.appendChild(soldierButton);
     soldierButton.innerHTML = "Soldier";
 
@@ -186,9 +173,10 @@ window.onload = function(){
     // Add event handlers for click events on fighters
     wizardButton.addEventListener ("click", function() {
     myWizard = new Wizard("magic points"); 
+   /*  myWizard.characterClick(); */
     myWizard.attack(5);
-    myWizard.yourHealth(200);
-    
+    myWizard.yourHealth(79);
+    myWizard.gameOver(); 
   });
   
   thiefButton.addEventListener ("click", function() {
@@ -200,8 +188,11 @@ window.onload = function(){
   soldierButton.addEventListener ("click", function() {
     mySoldier = new Soldier("stamina");
     mySoldier.attack(200);
+    myWizard.curemySelf();
     /* console.log("you selected soldier, please select second player to start game."); */
   });
+
+
 
 //show console on page instead
   window.console = {
