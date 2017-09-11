@@ -183,23 +183,25 @@ window.onload = function(){
     wizardButton.addEventListener ("click", function() {
     myWizard = new Wizard("magic points"); 
    /*  myWizard.characterClick(); */
-    myWizard.attack(5);
-    myWizard.yourHealth(79);
+    myWizard.attack();
+    myWizard.yourHealth();
+    myWizard.curemySelf();
     myWizard.gameOver(); 
   });
   
   thiefButton.addEventListener ("click", function() {
     myThief = new Thief("stamina");
-    myThief.attack(20);
-    myWizard.yourHealth(79);
+    myThief.attack();
+    myWizard.yourHealth();
+    myWizard.curemySelf();
     myWizard.gameOver(); 
     /* console.log("you selected Thief, please select second player to start game."); */
   });
   
   soldierButton.addEventListener ("click", function() {
     mySoldier = new Soldier("stamina");
-    mySoldier.attack(200);
-    myWizard.yourHealth(79);
+    mySoldier.attack();
+    myWizard.yourHealth();
     myWizard.curemySelf();
     myWizard.gameOver();
     /* console.log("you selected soldier, please select second player to start game."); */
