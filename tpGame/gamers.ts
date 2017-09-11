@@ -1,5 +1,3 @@
-
-
 //create the class with the different properties of health, damage, cureMySelf
 class Character {
 	health: number;
@@ -23,13 +21,13 @@ class Character {
 			}
     } 
 
-   curemySelf() {
+   /* curemySelf() {
         if (this.damage > 30) {
 				console.log("you obtained a health potion!");
 			} else {
 				console.log("Good health, keep fighting!");
 			}
-    }  
+    } */  
  
 
            
@@ -59,9 +57,9 @@ class Wizard extends Character {
         super.attack(attackValue);
     }
 
-    yourHealth(health:number = 200){
+     yourHealth(health:number = 200){
         super.health(health);
-    }
+    }  
 
         
 }
@@ -190,6 +188,7 @@ window.onload = function(){
     myWizard = new Wizard("magic points"); 
     myWizard.attack(5);
     myWizard.yourHealth(200);
+    
   });
   
   thiefButton.addEventListener ("click", function() {
@@ -214,5 +213,3 @@ window.onload = function(){
   }
   
 }
-
-
