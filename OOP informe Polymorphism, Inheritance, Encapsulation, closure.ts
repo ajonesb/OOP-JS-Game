@@ -95,7 +95,8 @@ tom.move(34);
 /*
 
 Poly= many, Morphism=form - Link : https://blog.knoldus.com/2017/02/17/object-oriented-javascript-polymorphism-with-examples/
-* Means same name, different behavior. 
+
+* Means same name, different behavior. Use the same property name but assign a different method. 
 
 When: It is used when we want a function’s (let say function HOLA) interface to be flexible enough to accept different 
 types or number of parameters. Also, based on changing parameters types or numbers, we might want the function HOLA to 
